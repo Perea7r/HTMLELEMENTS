@@ -1,4 +1,6 @@
 {
+    "require": {
+    },
     "require-dev": {
         "phpunit/phpunit": "^9"
     },
@@ -6,6 +8,20 @@
         "files": [
             "src/htmlElements.php",
             "src/htmlELementsObject.php"
-        ]
+        ],
+        "psr-4": {
+            "PHPUnit\\":"vendor/phpunit/phpunit/src/",
+            "ITEC\\DAW\\PROG\\HTMLELEMENTSOBJECT\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "files": [
+            "src/htmlElements.php",
+            "src/htmlELementsObject.php"
+        ],
+        "psr-4": {
+            "PHPUnit\\":"vendor/phpunit/phpunit/src/",
+            "ITEC\\DAW\\PROG\\HTMLELEMENTSOBJECT\\": "src/"
+        }
     }
 }
