@@ -2,6 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 use function ITEC\DAW\PROG\HTMLELEMENTS\toHTML;
+use function ITEC\DAW\PROG\HTMLELEMENTSOBJECT\class\getHtml;
 
 final class htmlElementsTest extends TestCase
 {
@@ -146,12 +147,6 @@ final class htmlElementsObjectTest extends TestCase
             "content" => "",
             "isEmpty" => true
         ];
-        $br = [
-            "nameTag" => "br",
-            "attributes" => [],
-            "content" => "",
-            "isEmpty" => true
-        ];
         $p = [
             "nameTag" => "p",
             "attributes" => [
@@ -184,9 +179,9 @@ final class htmlElementsObjectTest extends TestCase
     /**
      * @dataProvider DPtestHtmlElementsObject
      */
-    public function createHtmlElements($esperado,$nameTag,$attributes,$content,$isEmpty)
+    public function testcreateHtmlElements($esperado,$nameTag,$attributes,$content,$isEmpty)
     {
-        $htmlElement = ITEC\DAW\PROG\HTMLELEMENTSOBJECT\htmlElementsObject(
+        $htmlElement = getHtml(
             $nameTag,
             $attributes,
             $content,
