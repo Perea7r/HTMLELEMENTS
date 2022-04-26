@@ -1,0 +1,11 @@
+{
+    "php.executablePath": "c://php",
+    "phpcs.executablePath": "./vendor/bin/phpcs",
+    "phpcs.ignorePatterns": ["*/vendor/*"],
+    "phpcs.showSources": true,
+    "phpcs.standart": "PSR12",
+    "phpcs.enable": false, //ERA TRUE, LO QUITE PARA QUE NO SALIERA EL MENSAJE EMERGENTE 
+    "phpcs.showWarnings": true,
+    "phpcs.errorSeverity": 4,
+    "phpcs.warningSeverity": 0,
+}

@@ -1,0 +1,3 @@
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+
+Ejecutar cada vez que se reinicia el pc
