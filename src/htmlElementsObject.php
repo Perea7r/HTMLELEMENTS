@@ -47,6 +47,6 @@ namespace ITEC\DAW\PROG\HTMLELEMENTSOBJECT;
             if(!$this->isEmpty)
                 $code .= $this->content . "</". $this->nameTag.">";
             return $code;
-            }
+        }
     }
 ?>
