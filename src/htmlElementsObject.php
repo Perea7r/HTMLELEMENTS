@@ -3,10 +3,10 @@ namespace ITEC\DAW\PROG\HTMLELEMENTSOBJECT;
     class HTMLELEMENTS{
         private string $nameTag;
         private array $attributes;
-        private array $content;
+        private string $content;
         private bool $isEmpty;
 
-        public function __construct(string $nameTag, array $attributes,array $content, bool $isEmpty){
+        public function __construct(string $nameTag, array $attributes,string $content, bool $isEmpty){
             $this->nameTag = $nameTag;
             $this->attributes = $attributes;
             $this->content = $isEmpty?null:$content;
@@ -21,7 +21,7 @@ namespace ITEC\DAW\PROG\HTMLELEMENTSOBJECT;
             return $this->isEmpty;
         }
 
-        public function addContent(array $HTMLElement){
+        public function addContent(string $HTMLElement){
             $this->content[] = $HTMLElement;
         }
         

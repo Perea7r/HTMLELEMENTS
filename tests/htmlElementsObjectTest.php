@@ -2,10 +2,10 @@
 
 use PHPUnit\Framework\TestCase;
 use ITEC\DAW\PROG\HTMLELEMENTSOBJECT\HTMLELEMENTS;
-final class htmlElementsTest extends TestCase{
+final class htmlElementsObjectTest extends TestCase{
 
     function DPHtmlElementsObjectTest(){
-        $br = new ();
+        $p = new HTMLELEMENTS ("p",[],"Hola",false);
         return [
             "TEST p" => [
                 '<p id="p1" class="parrafo">Hola"',

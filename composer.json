@@ -5,22 +5,13 @@
         "phpunit/phpunit": "^9"
     },
     "autoload": {
-        "files": [
-            "src/htmlElements.php",
-            "src/htmlELementsObject.php"
-        ],
         "psr-4": {
-            "PHPUnit\\":"vendor/phpunit/phpunit/src/",
             "ITEC\\DAW\\PROG\\HTMLELEMENTSOBJECT\\": "src/"
         }
     },
     "autoload-dev": {
-        "files": [
-            "src/htmlElements.php",
-            "src/htmlELementsObject.php"
-        ],
+
         "psr-4": {
-            "PHPUnit\\":"vendor/phpunit/phpunit/src/",
             "ITEC\\DAW\\PROG\\HTMLELEMENTSOBJECT\\": "src/"
         }
     }
