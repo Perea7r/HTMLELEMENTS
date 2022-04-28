@@ -23,13 +23,20 @@ final class htmlElementsObjectTest extends TestCase{
                 ],
                 "Hola",
                 false
+            ],
+            "Elemento con p" => [
+                '<div id="parrafo"><p class="Normal" id="ParrafoIntroduccion">Hola</p></div>',
+                "div" ,
+                ["id" => "parrafo"],
+                [$p],
+                false
             ]
         ];
     }
     /**
      * @dataProvider DPHtmlElementsObjectTest
      */
-    public function testGetHtml($esperado, $nameTag, $attributes, $content, $isEmpty){
+    public function testHtmlElementsObject($esperado, $nameTag, $attributes, $content, $isEmpty){
         $Tag = new HTMLELEMENTS($nameTag, $attributes, $content, $isEmpty);
         $this-> assertEquals($esperado, $Tag->getHtml());
     }
