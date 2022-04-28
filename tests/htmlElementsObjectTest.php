@@ -1,18 +1,25 @@
 <?php
 
-use PHPUnit\Framework\TestCase;
 use ITEC\DAW\PROG\HTMLELEMENTSOBJECT\HTMLELEMENTS;
+use PHPUnit\Framework\TestCase;
 final class htmlElementsObjectTest extends TestCase{
 
     function DPHtmlElementsObjectTest(){
-        $p = new HTMLELEMENTS ("p",[],"Hola",false);
+        $p = new HTMLELEMENTS ("p",["class" => "Normal", "id" => "ParrafoIntroduccion"],"Hola",false);
         return [
-            "TEST p" => [
-                '<p id="p1" class="parrafo">Hola"',
+            "p" => [
+                '<p>',
+                "p",
+                [],
+                "Hola",
+                false
+            ],
+            "Texto" => [
+                '<p class="Normal" id="ParrafoIntroduccion">Hola</p>',
                 "p",
                 [
-                    "id" => "ParrafoIntroduccion",
-                    "class" => "Normal"
+                    "class" => "Normal",
+                    "id" => "ParrafoIntroduccion"
                 ],
                 "Hola",
                 false
