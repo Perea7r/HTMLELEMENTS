@@ -1,8 +1,8 @@
 <?php
 namespace ITEC\DAW\PROG\HTMLELEMENTSOBJECT;
-    class HTMLELEMENTS{
+    class HtmlElementsObject{
         private string $nameTag;
-        private array $attributes;
+        private array $attributes; 
         private string $content;
         private bool $isEmpty;
 

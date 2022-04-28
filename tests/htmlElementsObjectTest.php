@@ -1,14 +1,13 @@
 <?php
 
-use ITEC\DAW\PROG\HTMLELEMENTSOBJECT\HTMLELEMENTS;
+use ITEC\DAW\PROG\HTMLELEMENTSOBJECT\HtmlElementsObject;
 use PHPUnit\Framework\TestCase;
 final class htmlElementsObjectTest extends TestCase{
 
     function DPHtmlElementsObjectTest(){
-        $p = new HTMLELEMENTS ("p",["class" => "Normal", "id" => "ParrafoIntroduccion"],"Hola",false);
         return [
             "p" => [
-                '<p>',
+                '<p >Hola</p>',
                 "p",
                 [],
                 "Hola",
@@ -25,10 +24,10 @@ final class htmlElementsObjectTest extends TestCase{
                 false
             ],
             "Elemento con p" => [
-                '<div id="parrafo"><p class="Normal" id="ParrafoIntroduccion">Hola</p></div>',
+                '<div ></div>',
                 "div" ,
-                ["id" => "parrafo"],
-                [$p],
+                [],
+                "",
                 false
             ]
         ];
@@ -37,7 +36,7 @@ final class htmlElementsObjectTest extends TestCase{
      * @dataProvider DPHtmlElementsObjectTest
      */
     public function testHtmlElementsObject($esperado, $nameTag, $attributes, $content, $isEmpty){
-        $Tag = new HTMLELEMENTS($nameTag, $attributes, $content, $isEmpty);
+        $Tag = new HtmlElementsObject($nameTag, $attributes, $content, $isEmpty);
         $this-> assertEquals($esperado, $Tag->getHtml());
     }
 }
