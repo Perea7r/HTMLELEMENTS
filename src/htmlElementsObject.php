@@ -1,6 +1,8 @@
 <?php
 namespace ITEC\DAW\PROG\HTMLELEMENTSOBJECT;
 
+use function PHPUnit\Framework\returnSelf;
+
     class HtmlElementsObject{
         const EMPTY_TAGS = [
             "area",
@@ -414,8 +416,15 @@ namespace ITEC\DAW\PROG\HTMLELEMENTSOBJECT;
         return true;
         }
 
-        private function isCorrectAttributesValues(){
-            
+        private function isCorrectAttributesValues($attributes, $value){
+            if (is_array(self::ATTRIBUTE_VALUES[$attributes])) {
+                if (in_array($value, self::ATTRIBUTE_VALUES[$attributes]))
+                return false;
+            } else {
+                if ($value != self::ATTRIBUTE_VALUES[$attributes])
+                return false;
+            }
+            return true;
         }
     }
 ?>
