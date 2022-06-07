@@ -1,8 +1,5 @@
 <?php
 namespace ITEC\DAW\PROG\HTMLELEMENTSOBJECT;
-
-use function PHPUnit\Framework\returnSelf;
-
     class HtmlElementsObject{
         const EMPTY_TAGS = [
             "area",
@@ -352,7 +349,11 @@ use function PHPUnit\Framework\returnSelf;
             $this->nameTag = $nameTag;
             $this->attributes = $attributes;
             $this->content = $isEmpty?null:$content;
-            $this->isEmpty = $isEmpty;
+            $this->isEmpty= $isEmpty;
+        }
+
+        public static function create(string $nameTag, array $attributes ,string $content, bool $isEmpty){
+            return new htmlElementsClass($nameTag, $attributes, $content, $isEmpty);
         }
 
         public function getNameTag():string {
@@ -425,6 +426,34 @@ use function PHPUnit\Framework\returnSelf;
                 return false;
             }
             return true;
+        }
+
+        public static function createHTML(){
+            $html = self;;create();
+            $title = self::create();
+            $head1 = self::create(
+                "head",
+                [],
+                [
+                    $metachild1,
+                    $metachild2,
+                    $metachild3
+                ],
+                false
+            );
+            $head2 = self::create();
+            $head3 = self::create();
+            $body = self::create();
+                return self::create(
+                    "",
+                    [],
+                    [
+                        $doctype,
+                        $html
+                    ],
+                    false
+                );
+            ];
         }
     }
 ?>
